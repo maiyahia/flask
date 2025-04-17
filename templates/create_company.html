@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        form {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create a New Company</h1>
+    <form  method="post">
+        {{ form.hidden_tag() }} 
+        <p>{{form.name.label}} {{form.name()}}</p>
+        <p>{{form.location.label}} {{form.location()}}</p>
+        <p>{{form.description.label}} {{form.description()}}</p>
+        <p>{{form.employees_count.label}} {{form.employees_count()}}</p>
+        <p><input type="submit" value="Create Company"></p>
+
+    </form>
+
+    
+</html>
